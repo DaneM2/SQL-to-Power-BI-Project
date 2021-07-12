@@ -1,0 +1,6 @@
+SELECT 
+arrival_date_year,
+hotel,
+sum((stays_in_week_nights + stays_in_weekend_nights)*adr) as revenue		
+FROM hotels
+Group By arrival_date_year, hotel
